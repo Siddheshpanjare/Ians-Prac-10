@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Cipher Central</title>
+            <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+            <link rel="stylesheet" type="text/css" href="style.css">
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Indie+Flower|Neucha|Special+Elite|Bungee" rel="stylesheet">
+
+            <meta charset="UTF-8">
+            <meta name="description" content="Cipher Central - Cryptography Information with Encoders and Decoders">
+            <meta name="keywords" content="Cipher,Encode,Decode,Encrypt,Decrypt,Caesar,ROT13,Vigenere,Morse">
+            <meta name="author" content="Alex McGill">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="nav_bar" class="fixed-nav-bar">
+            <a href="index.html" id="cipherCentral">Cipher Central</a>
+            <ul>
+                <li><a href="design.html" class="active_page"></a></li>
+                <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Ciphers</a>
+                    <div class="dropdown-content">
+                        <a href="ciphers/caesar.html">Caesar</a>
+                    </div>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li class="spacer"></li>
+            </ul>
+        </div>
+        <div id="content">
+            <div class="large_vertical_spacer">
+            <h2>Website Design Document</h2>
+            
+            <h4>Headings</h4>
+            <div class="design">
+                <div class="element">
+                    <ul>
+                        <li>Headings should be in the center of the page and have a font size of 320%, making it stand out from the other text as it is much larger. They should be in font 'Neucha'</li>
+                    </ul>
+                </div>
+                <h2>Example Heading</h2>
+            </div>
+            
+            <h4>Paragraphs</h4>
+            <div class="design" >
+                <div class="element">
+                    <ul>
+                        <li>Paragraphs should have an outer margin of 3% so that text does not go right up to the edge of the screen. There should be a line height of 130% so that the lines of text aren't too tight. The paragraph font should be 'Open Sans Condensed' and the text itself should be justified to reach the borders of the page</li>
+                    </ul>
+                </div>
+                <p class="design_sample">Sample paragraph. Lorem ipsum dolor sit amet, mei detracto insolens at, an vim affert labores, nam everti debitis scripserit no. Partem nostro urbanitas ut nam, ad sit vidit ornatus. An delectus placerat qualisque eam. Diam sint aperiam an sit, docendi accumsan deserunt no mei. Qui et essent fuisset. Ne eos euismod verterem molestiae. Ea duo honestatis complectitur, nusquam pertinax scribentur ne sea, mel primis consulatu ea. Mea ex mundi gubergren, cum alii legendos vituperatoribus ut.</p>
+            </div>
+
+            <h4>Cipher Encrypt + Decrypt</h4>
+            <div class="design">
+                <div class="element">
+                    <ul>
+                        <li>The encrypt and decrypt text areas for each cipher should have a textured scroll background to contrast with the white background of the page. There should be placeholder text within the text area to make it clear whether the text area is for normal text or encrypted text. The font of the text area should be in font 'Neucha', to match the headings and look more like handwriting rather than the standard font used in paragraphs etc.</li>
+                    </ul>
+                </div>
+                <textarea class="custom" id="textarea_input" rows="10" style="margin-left: 3%;" placeholder="Enter your normal message here . . . "></textarea>
+            </div>
+
+            <h4>YouTube Videos</h4>
+            <div class="design">
+                <div class="element">
+                    <ul>
+                        <li>YouTube videos should be displayed on the page with a size of 560 x 315. This is the default recommended size by YouTube as sticks to the standard 16:9 video playback aspect ratio. The video should have a thin black border of 3px in order to make it seem more integrated into the web page instead of just a random video</li>
+                    </ul>
+                </div>
+                <iframe width="560" height="315"  src="https://www.youtube.com/embed/-yFZGF8FHSg" frameborder="0" allow="encrypted-media" allowfullscreen style="margin-left: 3%;" alt="Youtube video "></iframe>
+            </div>
+
+            <h4>Images</h4>
+            <div class="design">
+                <div class="element">
+                    <ul>
+                        <li>Image examples should be displayed in the same positon on each page and of the same layout in order to aid the users understanding of current web page cipher. They should have informative text integrated to explain what is being demonstrated. For example, 'Shift of 3' (Key = 3)</li>
+                    </ul>
+                </div>
+                <div class="set_demo">
+                    <img src="images/shifts/shift_3.png">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

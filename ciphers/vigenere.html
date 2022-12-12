@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Cipher Central</title>
+            <link rel='shortcut icon' type='image/x-icon' href='../favicon.ico' />
+            <link rel="stylesheet" type="text/css" href="../style.css">
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Indie+Flower|Neucha|Special+Elite|Bungee" rel="stylesheet">
+            
+            <meta charset="UTF-8">
+            <meta name="description" content="Cipher Central - Cryptography Information with Encoders and Decoders">
+            <meta name="keywords" content="Cipher,Encode,Decode,Encrypt,Decrypt,Caesar,ROT13,Vigenere,Morse">
+            <meta name="author" content="Alex McGill">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="nav_bar" class="fixed-nav-bar">
+            <a href="../index.html" id="cipherCentral">Cipher Central</a>
+            <ul>
+                <li><a href="../design.html">Design</a></li>
+                <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn active_page">Ciphers</a>
+                    <div class="dropdown-content">
+                        <a href="rot13.html">ROT13</a>
+                        <a href="caesar.html" >Caesar</a>
+                        <a href="vigenere.html" class="active_page">Vigenere</a>
+                        <a href="morsecode.html">Morse Code</a>
+                    </div>
+                </li>
+                <li><a href="../index.html" >Home</a></li>
+                <li class="spacer"></li>
+            </ul>
+        </div>
+        <div id="content">
+            <div class="large_vertical_spacer"></div>
+            <h2>Vigenere Cipher</h2>
+            <div class="vertical_spacer"></div>
+            <div id="set">
+                <img class="image" src="../images/shifts/shift_keyword.png"  alt="Image example showing a Vigenere cipher with multiple shifts, using the keyword 'LUNCH'">
+                <p>The Vigenere cipher is a polyalphabetic cipher that was invented in the 16th century. This method of encryption uses multiple of Caesar ciphers with a keyword to switch the key every letter rather than a single key, making it harder to decrypt. As it is polyalphabetic cipher, it is not vulnerable to regular decryption cracking methods such as frequency analysis because multiple letters can be represented the same letter.<br />
+                It works by getting the value of each letter in the keyword and using that as the amount to shift for the letter in the message. For example, if the message was “HELP” and the keyword was “abc”, then the Caesar cipher key values would be 0,1,2,0. When the key runs out of characters it loops back to the start of the keyword. The encrypted message would be “HFNP”.</p>
+            </div>
+            <h2>Try it out!</h2>
+            <br />
+            <div id="try" class="center">
+                <textarea class="custom" id="textarea_input" rows="10" style="margin-left:2%" placeholder="Enter your normal message here . . . "></textarea>
+                <div id="encrypt_decrypt">
+                    <h3 id="small_h3">KEY: <input id="vigenere_key" type="text"  title="Enter a word for the cipher key"></h3>
+                    <button type="button" class="encode_button" onclick="vigenere_encrypt()" id="vigenere_encode_button" style="margin-left: 2%;">Encrypt</button>
+                    <button type="button" class="encode_button" onclick="vigenere_decrypt()" id="vigenere_decode_button" style="margin-left: 2%;">Decrypt</button>
+                    
+                    <div id="controls">
+                        <button id="swap_btn" type="button" class="control_button" onclick="swapTextArea()" title="Swap the text in the input and output boxes">&#x21C6</button>
+                        <button id="clear_btn" type="button" class="control_button" onclick="clearTextArea()" title="Clear the text in the input and output boxes">CLEAR</button>
+                    </div>
+                </div>
+                <textarea class="custom scroll_bg" rows="10" id="textarea_output"style="margin-right:2%" placeholder="Enter your encrypted message here . . . "></textarea>
+            </div>
+            <div class="large_vertical_spacer"></div>
+            <h2>Additional information</h2>
+            <p>For more information about the Vigenere Cipher check out this YouTube video:</p>
+            <div id="youtube_videos">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/SkJcmCaHqS0" frameborder="0" allow="encrypted-media" allowfullscreen alt="Youtube video explaining more information about the Vigenere cipher"></iframe>
+            </div>
+        </div>
+        <script type="text/javascript" src="../js/cipher_functions.js"></script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Cipher Central</title>
+            <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+            <link rel="stylesheet" type="text/css" href="style.css">
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Indie+Flower|Neucha|Special+Elite|Bungee" rel="stylesheet">
+
+            <meta charset="UTF-8">
+            <meta name="description" content="Cipher Central - Cryptography Information with Encoders and Decoders">
+            <meta name="keywords" content="Cipher,Encode,Decode,Encrypt,Decrypt,Caesar,ROT13,Vigenere,Morse">
+            <meta name="author" content="Alex McGill">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section class="banner">
+            <div class="inner">
+                <div class="display">
+                    <h1>Cipher Central</h1>
+                    <button type="button" class="btn" id="btn_top">Get Started</button>
+                </div>
+            </div>
+        </section>
+        <div id="nav_bar" class="fixed-nav-bar">
+            <a href="#" id="cipherCentral">Cipher Central</a>
+            <ul>
+                
+                <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Ciphers</a>
+                    <div class="dropdown-content">
+                        
+                        <a href="ciphers/caesar.html">Caesar</a>
+                        
+                        
+                    </div>
+                </li>
+                <li><a href="#" class="active_page">Home</a></li>
+                <li class="spacer"></li>
+            </ul>
+        </div>
+        <div id="content">
+            <div class="large_vertical_spacer"></div>
+            <h2>What is a cipher?</h2>
+            <p>A cipher is a way of encrypting and decrypting messages by following a pattern of steps. They can range from being very simple to extremely complex and impossible to decode without the correct key. There are two different main types of classical ciphers: substitution ciphers and transposition ciphers.</p>
+            <div id="set">
+                <img class="image" src="images/shifts/shift_2.png" alt="Image example showing a caesar shift of 2">
+                <p>A substitution cipher swaps letters in a message for other letters. For example, the ROT13 Cipher has a key of 13 so each letter is swapped by the character that is 13 characters along the alphabet. A transposition cipher is where the letters stay the same, but the order of the letters are swapped according to some design. The simplest example of this would reversing the order of a message, so “send help” is turned into “pleh dnes”</p>
+            </div>
+            <p>There are many YouTube videos explaining ciphers and cryptography available online. The following videos are good starting points for learning cryptography</p>
+            <div id="youtube_videos">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-yFZGF8FHSg" frameborder="0" allow="encrypted-media" allowfullscreen alt="Youtube video about making and breaking code ciphers"></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-Gk9kaFoBxU" frameborder="0" allow="encrypted-media" allowfullscreen alt="Youtube video cryptography lesson introducing the idea of block ciphers"></iframe>
+            </div>
+            <br />
+            <h2>Background information</h2>
+            <p>Cryptography, the use of codes and ciphers to protect secrets, began thousands of years ago. Until recent decades, it has been the story of what might be called classic cryptography — that is, of methods of encryption that use pen and paper, or perhaps simple mechanical aids. In the early 20th century, the invention of complex mechanical and electromechanical machines, such as the Enigma rotor machine, provided more sophisticated and efficient means of encryption; and the subsequent introduction of electronics and computing has allowed elaborate schemes of still greater complexity, most of which are entirely unsuited to pen and paper.</p>
+            <p>The use of codes and ciphers to obscure communication has been around for thousands of years with pen and paper using classical cryptography. By the time World War 2 came around, ciphers had advanced into electronic cipher machines. This was very useful for keeping sensitive information confidential and played a key role in both World War 1 and 2 for communication between allies. The Germans relied on communicating with an Enigma machine as it was so mathematically difficult to break the message keys. To add to the difficulty the Germans would switch cipher keys daily, meaning that even if by chance the cipher key was cracked it would be useless for any other day. When the Enigma code was finally cracked it is thought to have reduced the length of World War 2 by up to two years.<br />
+            Modern algorithms typically involve the use of a public key and private key and are extremely secure. When the technological advancement that is supercomputers and quantum computing arrive, new encryption methods will have be deployed to ensure data is not prone to brute force attacks.</p>
+
+            <h2>Select a cipher to find out more!</h2> <br />
+            <div id="try" class="center">
+                <a href="ciphers/caesar.html"><img class="try_thumbnail" src="images/thumbnails/caesar.jpg" alt="Caesar Cipher clickable thumbnail"></a>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/animations.js"></script>
+    </body>
+</html>

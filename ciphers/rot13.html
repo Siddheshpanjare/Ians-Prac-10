@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Cipher Central</title>
+            <link rel='shortcut icon' type='image/x-icon' href='../favicon.ico' />
+            <link rel="stylesheet" type="text/css" href="../style.css">
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Indie+Flower|Neucha|Special+Elite|Bungee" rel="stylesheet">
+            
+            <meta charset="UTF-8">
+            <meta name="description" content="Cipher Central - Cryptography Information with Encoders and Decoders">
+            <meta name="keywords" content="Cipher,Encode,Decode,Encrypt,Decrypt,Caesar,ROT13,Vigenere,Morse">
+            <meta name="author" content="Alex McGill">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="nav_bar" class="fixed-nav-bar">
+            <a href="../index.html" id="cipherCentral">Cipher Central</a>
+            <ul>
+                <li><a href="../design.html">Design</a></li>
+                <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn active_page">Ciphers</a>
+                    <div class="dropdown-content">
+                        <a href="#" class="active_page">ROT13</a>
+                        <a href="caesar.html">Caesar</a>
+                        <a href="vigenere.html">Vigenere</a>
+                        <a href="morsecode.html">Morse Code</a>
+                    </div>
+                </li>
+                <li><a href="../index.html" >Home</a></li>
+                <li class="spacer"></li>
+            </ul>
+        </div>
+        <div id="content">
+            <div class="large_vertical_spacer"></div>
+            <h2>ROT13 Cipher</h2>
+            <div class="vertical_spacer"></div>
+            <div id="set">
+                <img class="image" src="../images/shifts/shift_13.png" alt="Image example showing a ROT13 cipher with the standard shift of 13">
+                <p>ROT13 stands for “Rotate by 13 places” which fits well as it is a very simple substitution cipher uses the Caesar cipher method of shifting letters along the alphabet. The difference is that where Caesar cipher has a key (the number of characters to shift), ROT13 can only shift each letter 13 characters along. <br />
+                As the Latin alphabet has only 26 letters it means that the same algorithm for encryption can be used for decryption, making it very unsecure. It provides little to no security and is typically used as an example of poor encryption.</p>
+            </div>            
+            <h2>Try it out!</h2>
+            <br />
+            <div id="try" class="center">
+                <textarea class="custom" id="textarea_input" rows="10" style="margin-left:2%" placeholder="Enter your normal message here . . . "></textarea>
+                <div id="encrypt_decrypt">
+                    <button type="button" class="encode_button" onclick="rot13_encrypt()" id="rot13_encode_button">Encrypt</button>
+                    <button type="button" class="encode_button" onclick="rot13_decrypt()" id="rot13_decode_button">Decrypt</button>
+                    
+                    <div id="controls">
+                        <button id="swap_btn" type="button" class="control_button" onclick="swapTextArea()" title="Swap the text in the input and output boxes">&#x21C6</button>
+                        <button id="clear_btn" type="button" class="control_button" onclick="clearTextArea()" title="Clear the text in the input and output boxes">CLEAR</button>
+                    </div>
+                </div>
+                <textarea class="custom scroll_bg" rows="10" id="textarea_output"style="margin-right:2%" placeholder="Enter your encrypted message here . . . "></textarea>
+            </div>
+            <div class="large_vertical_spacer"></div>
+            <h2>Additional information</h2>
+            <p>For more information about the ROT13 Cipher check out this YouTube video:</p>
+            <div id="youtube_videos">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PZ2tW0Wfkls" frameborder="0" allow="encrypted-media" allowfullscreen alt="Youtube video explaining more information about the ROT13 cipher"></iframe>
+            </div>
+        </div>
+        <script type="text/javascript" src="../js/cipher_functions.js"></script>
+    </body>
+</html>

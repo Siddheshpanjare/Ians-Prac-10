@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Cipher Central</title>
+            <link rel='shortcut icon' type='image/x-icon' href='../favicon.ico' />
+            <link rel="stylesheet" type="text/css" href="../style.css">
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Indie+Flower|Neucha|Special+Elite|Bungee" rel="stylesheet">
+            
+            <meta charset="UTF-8">
+            <meta name="description" content="Cipher Central - Cryptography Information with Encoders and Decoders">
+            <meta name="keywords" content="Cipher,Encode,Decode,Encrypt,Decrypt,Caesar,ROT13,Vigenere,Morse">
+            <meta name="author" content="Alex McGill">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="nav_bar" class="fixed-nav-bar">
+            <a href="../index.html" id="cipherCentral">Cipher Central</a>
+            <ul>
+               
+                <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn active_page">Ciphers</a>
+                    <div class="dropdown-content">
+                       
+                        <a href="caesar.html" class="active_page">Caesar</a>
+                       
+                    </div>
+                </li>
+                <li><a href="../index.html">Home</a></li>
+                <li class="spacer"></li>
+            </ul>
+        </div>
+        <div id="content">
+            <div class="large_vertical_spacer"></div>
+            <h2>Caesar Cipher</h2>
+            <div class="vertical_spacer"></div>
+            <div id="set">
+                <img class="image" src="../images/shifts/shift_3.png" alt="Image example showing a Caesar cipher with a shift of 3">
+                <p>The Caesar cipher is a substitution cipher that shifts each letter in the message by the value of the key. For example, if the message was “send help” and the key was 3 then the encrypted message would be “vhqg khos”.<br />
+                As it is a substitution cipher it is vulnerable to common decryption cracking methods such as frequency analysis meaning it provides virtually no security for communication. Even without the key, using a brute force attack on the encrypted message can be broken within 25 attempts. This is because there are only 26 characters in the alphabet meaning that there are only 25 different possible key shifts. Using a key of anything over 25 would provide an output than has already been tested.</p>
+            </div>
+            <h2>Try it out!</h2>
+            <br />
+            <div id="try" class="center">
+                <textarea class="custom" id="textarea_input" rows="10" style="margin-left:2%" placeholder="Enter your normal message here . . . "></textarea>
+                <div id="encrypt_decrypt">
+                    <h3>KEY: <input id="caesar_key" type="number" title="Enter a number for the cipher key"></h3>
+                    <button type="button" class="encode_button" onclick="caesar_encrypt()" id="caesar_encode_button">Encrypt</button>
+                    <button type="button" class="encode_button" onclick="caesar_decrypt()" id="caesar_decode_button">Decrypt</button>
+                    
+                    <div id="controls">
+                        <button id="swap_btn" type="button" class="control_button" onclick="swapTextArea()" title="Swap the text in the input and output boxes">&#x21C6</button>
+                        <button id="clear_btn" type="button" class="control_button" onclick="clearTextArea()" title="Clear the text in the input and output boxes">CLEAR</button>
+                    </div>
+                </div>
+                <textarea class="custom scroll_bg" rows="10" id="textarea_output"style="margin-right:2%" placeholder="Enter your encrypted message here . . . "></textarea>
+            </div>
+            <div class="large_vertical_spacer"></div>
+            <h2>Additional information</h2>
+            <p>For more information about the Caesar Cipher check out this YouTube video:</p>
+            <div id="youtube_videos">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LVHeW1hcdRk" frameborder="0" allow="encrypted-media" allowfullscreen alt="Youtube video explaining more information about the Caesar cipher"></iframe>
+            </div>
+        </div>
+        <script type="text/javascript" src="../js/cipher_functions.js"></script>
+    </body>
+</html>

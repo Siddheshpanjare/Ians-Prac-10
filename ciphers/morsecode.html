@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Cipher Central</title>
+            <link rel='shortcut icon' type='image/x-icon' href='../favicon.ico' />
+            <link rel="stylesheet" type="text/css" href="../style.css">
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Indie+Flower|Neucha|Special+Elite|Bungee" rel="stylesheet">
+            
+            <meta charset="UTF-8">
+            <meta name="description" content="Cipher Central - Cryptography Information with Encoders and Decoders">
+            <meta name="keywords" content="Cipher,Encode,Decode,Encrypt,Decrypt,Caesar,ROT13,Vigenere,Morse">
+            <meta name="author" content="Alex McGill">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="nav_bar" class="fixed-nav-bar">
+            <a href="../index.html" id="cipherCentral">Cipher Central</a>
+            <ul>
+                <li><a href="../design.html">Design</a></li>
+                <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn active_page">Ciphers</a>
+                    <div class="dropdown-content">
+                        <a href="rot13.html">ROT13</a>
+                        <a href="caesar.html" >Caesar</a>
+                        <a href="vigenere.html">Vigenere</a>
+                        <a href="morsecode.html" class="active_page">Morse Code</a>
+                    </div>
+                </li>
+                <li><a href="../index.html" >Home</a></li>
+                <li class="spacer"></li>
+            </ul>
+        </div>
+        <div id="content">
+            <div class="large_vertical_spacer"></div>
+            <h2>Morse Code Cipher</h2>
+            <div class="vertical_spacer"></div>
+            <div id="set">
+                <img class="image" src="../images/shifts/morse_map.png" alt="Image example showing the morse code substitution for 'attack'">
+                <p>Morse code was created in 1832 by Samuel Morse as a method of communicating over long distances. It is a substitution cipher, so each Morse code symbol is mapped to a text character using a combination of “dots” and or “dashes”. To reduce the duration of transmissions, the length of each Morse character is inverse to the frequency of occurrence in the English language. For example, the letter used most frequently is “E”, so the Morse code representation is “.”, whereas the least used letter “Z” in Morse code is “--..”. <br />
+                It could be easily understood by a trained listener without the use of special equipment making it a very popular form of communication in not only war applications but also in communication between civilians. </p>
+            </div>
+            <h2>Try it out!</h2>
+            <br />
+            <div id="try" class="center">
+                <textarea class="custom" id="textarea_input" rows="10" style="margin-left:2%" placeholder="Enter your normal message here . . . "></textarea>
+                <div id="encrypt_decrypt">
+                    <button type="button" class="encode_button" onclick="morse_encrypt()" id="morse_encode_button">Encrypt</button>
+                    <button type="button" class="encode_button" onclick="morse_decrypt()" id="morse_decode_button">Decrypt</button>
+                    
+                    <div id="controls">
+                        <button id="swap_btn" type="button" class="control_button" onclick="swapTextArea()" title="Swap the text in the input and output boxes">&#x21C6</button>
+                        <button id="clear_btn" type="button" class="control_button" onclick="clearTextArea()" title="Clear the text in the input and output boxes">CLEAR</button>
+                    </div>
+                </div>
+                <textarea class="custom scroll_bg" rows="10" id="textarea_output"style="margin-right:2%" placeholder="Enter your encrypted message here . . . "></textarea>
+            </div>
+            <div class="large_vertical_spacer"></div>
+            <h2>Additional information</h2>
+            <p>For more information about Morse Code check out this YouTube video:</p>
+            <div id="youtube_videos">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xsDk5_bktFo" frameborder="0" allow="encrypted-media" allowfullscreen alt="Youtube video explaining more information about Morse code"></iframe>
+            </div>
+        </div>
+        <script type="text/javascript" src="../js/cipher_functions.js"></script>
+    </body>
+</html>
